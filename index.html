@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Комп'ютерні шрифти">
+    <meta name="description" content="Практична робота №12">
+    <meta name="author" content="Fedorova Anastasia">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Практична робота №12</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Мій сайт</h1>
+    </header>
+
+    <nav>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <ul class="menu">
+            <li><a href="#">🏠</a></li>
+            <li>
+                <a href="#">Новини</a>
+                <ul class="submenu">
+                    <li><a href="#">Технології</a></li>
+                    <li><a href="#">Спорт</a></li>
+                    <li><a href="#">Політика</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Блог</a>
+                <ul class="submenu">
+                    <li><a href="#">Подорожі</a></li>
+                    <li><a href="#">Кулінарія</a></li>
+                    <li><a href="#">Технології</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Про мене</a></li>
+            <li><a href="#">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <div class="row">
+        <aside>
+            <h2>Про мене</h2>
+            <h5>Моє фото:</h5>
+            <div class="fakeimg" style="height:200px;">Зображення</div>
+            <p>Текст in culpa qui officia deserunt mollit anim..</p>
+            <h3>Текст</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Зображення</div><br>
+            <div class="fakeimg" style="height:60px;">Зображення</div><br>
+            <div class="fakeimg" style="height:60px;">Зображення</div>
+        </aside>
+
+        <main>
+            <h2>ЗАГОЛОВОК</h2>
+            <h5>Опис, Dec 12, 2025</h5>
+            <div class="fakeimg" style="height:200px;">Зображення</div>
+            <p>Текст..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            <br>
+            <h2>ЗАГОЛОВОК</h2>
+            <h5>Опис, Nov 23, 2025</h5>
+            <div class="fakeimg" style="height:200px;">Зображення</div>
+            <p>Текст..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+        </main>
+    </div>
+
+    <footer>
+        <h2>Footer</h2>
+        <hr style="height: 1px; background-color: #e5e7eb; border-width: 0px;">
+        <p style="font-size: 0.625em; text-align: center;">
+            &copy; 2025 Федорова Анастасія | КН-23, СТФК НУХТ | <time>27-11-2025</time>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

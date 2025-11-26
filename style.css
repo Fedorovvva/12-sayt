@@ -1,0 +1,174 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-container {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    font-size: 1em;
+}
+
+header {
+    padding: 3.75em;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+nav {
+    display: flex;
+    background-color: #4d6719;
+}
+
+.menu {
+    display: flex;
+    background: #4d6719;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu li {
+    font-size: 1em;
+    font-family: Arial, Helvetica;
+    border-left: 1px solid #7ba428;
+    position: relative;
+}
+
+.menu li a {
+    display: block;
+    padding: 0 1.5625em;
+    line-height: 2.5em;
+    color: #9acd32;
+    text-decoration: none;
+}
+
+.menu li a:hover,
+.menu li.active>a {
+    color: #fff;
+    background: #9acd32;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #3a5014;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 12.5em;
+    z-index: 1000;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    border-left: none;
+    border-bottom: 1px solid #4d6719;
+}
+
+.submenu li a {
+    padding: 0.625em 1.25em;
+    line-height: normal;
+}
+
+.submenu li a:hover {
+    background: #7ba428;
+}
+
+.hamburger {
+    display: none;
+    background: #4d6719;
+    color: #9acd32;
+    border: none;
+    font-size: 1.5em;
+    padding: 0.625em 0.9375em;
+    cursor: pointer;
+}
+
+.hamburger:hover {
+    background: #7ba428;
+    color: #fff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+aside {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 1.25em;
+}
+
+main {
+    flex: 70%;
+    background-color: white;
+    padding: 1.25em;
+}
+
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 1.25em;
+}
+
+footer {
+    padding: 1.25em;
+    text-align: center;
+    background: #ddd;
+}
+
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .menu.show {
+        display: flex;
+    }
+    
+    .menu li {
+        border-left: none;
+        border-bottom: 1px solid #7ba428;
+    }
+    
+    .submenu {
+        position: static;
+        display: none;
+    }
+    
+    .menu li:hover .submenu {
+        display: block;
+    }
+
+    .submenu li {
+        padding-left: 1.25em;
+    }
+}
